@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# 200~"Coconut", <img src="https://i.imgur.com/lEwKd9P.jpeg" width = 250>
+
+# https://stackoverflow.com/a/49440990
+## q=0; while [[ q -lt 3 ]]; do ((q++)); echo $q; done
+#
+
+if [ ! -d img ]; then
+   echo "this script must be run from the docs dir"
+   exit 1
+fi
+
+rm -f PdbImages.md
+cd img
+
+files=`/bin/ls */*.png`
+
+cd ..
+i=0
+for file in $files
+do
+    realname=`echo $file | cut -c3-6`
+    echo "$realname <img src=\"img/$file\" width=100>"   >> PdbImages.md
+    ((i++))
+    if [[ i -gt 4 ]]; then
+      echo "<br>" >> PdbImages.md
+      i=0
+      fi
+done
