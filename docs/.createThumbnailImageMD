@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# https://stackoverflow.com/a/49440990
+## q=0; while [[ q -lt 3 ]]; do ((q++)); echo $q; done
+#
+
+if [ ! -d img ]; then
+   echo "this script must be run from the docs dir"
+   exit 1
+fi
+
+rm -f PdbThumbnailImages.md
+cd motm_thumbnail
+
+files=`/bin/ls *.png`
+
+cd ..
+i=0
+for file in $files
+do
+    echo "$file <img src=\"motm_thumbnail/$file\" width=100>"   >> PdbThumbnailImages.md
+    ((i++))
+    if [[ i -gt 3 ]]; then
+      echo "<br>" >> PdbThumbnailImages.md
+      i=0
+      fi
+done
