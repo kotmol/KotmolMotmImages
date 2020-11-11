@@ -9,7 +9,7 @@ if [ ! -d img ]; then
    exit 1
 fi
 
-rm -f PdbThumbnailImages.md
+rm -f MotmThumbnailImages.md
 cd motm_thumbnail
 
 files=`/bin/ls *.png`
@@ -18,10 +18,10 @@ cd ..
 i=0
 for file in $files
 do
-    echo "$file <img src=\"motm_thumbnail/$file\" width=100>"   >> PdbThumbnailImages.md
+    echo "$file <img src=\"motm_thumbnail/$file\" width=100>"   >> MotmThumbnailImages.md
     ((i++))
     if [[ i -gt 3 ]]; then
-      echo "<br>" >> PdbThumbnailImages.md
+      echo "<br>" >> MotmThumbnailImages.md
       i=0
       fi
 done
