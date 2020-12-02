@@ -24,3 +24,5 @@ http://www.rcsb.org/pages/policies
 [docs/MotmThumbnailImages.md]:docs/MotmThumbnailImages.md
 [docs/PdbImages.md]:docs/PdbImages.md
 
+<img src="docs/2z75.png" width = 200>
+
