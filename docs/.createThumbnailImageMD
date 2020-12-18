@@ -20,7 +20,7 @@ for file in $files
 do
     echo "$file <img src=\"motm_thumbnail/$file\" width=100>"   >> MotmThumbnailImages.md
     ((i++))
-    if [[ i -gt 3 ]]; then
+    if [[ i -gt 1 ]]; then
       echo "<br>" >> MotmThumbnailImages.md
       i=0
       fi
