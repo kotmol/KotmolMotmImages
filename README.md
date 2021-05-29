@@ -24,5 +24,5 @@ http://www.rcsb.org/pages/policies
 [docs/MotmThumbnailImages.md]:docs/MotmThumbnailImages.md
 [docs/PdbImages.md]:docs/PdbImages.md
 
-<img src="docs/img/1/1bna.png" width = 200>
+<img src="https://github.com/kotmol/KotmolMotmImages/blob/master/docs/img/1/1bna.png" width = 200>
 
